@@ -1,0 +1,59 @@
+  
+<!DOCTYPE html>
+<meta charset="utf-8">
+<title>Test Suite</title>
+<link rel="stylesheet" href="https://code.jquery.com/qunit/qunit-2.15.0.css">
+<body>
+    <div id="qunit"></div>
+    <div id="qunit-fixture"></div>
+    <script src="https://code.jquery.com/qunit/qunit-2.9.2.js"></script>
+    <script src="controller.js"></script>
+
+<script>
+//Dummy model
+let numbers = [7, 3, 1, 5, 8];
+// let chosenBar; // Variabel for hvilken stolpe som er valgt
+let inputValue;
+var selectedPillar; //variable for valgt stolpe (som skal ha border etc)
+var contentDiv = document.getElementById('content');
+var status = "disabled";
+
+//dummy view
+function show(){}
+
+//Test funksjon for å velge stolpe(Den som er valgt)
+QUnit.test("1- fiks velge en stolpe", function (assert) {
+    const actual = selectedPillar; 
+    const expected = []; 
+    assert.deepEqual(actual, expected);
+});
+
+//Test funksjon for å velge en annen stolpe enn den som er valgt
+QUnit.test("2- fiks velge en annen stolpe enn den som er valgt", function (assert) {
+    const actual = selectedPillar; 
+    const expected = [];
+    assert.deepEqual(actual, expected);
+});
+//Test funksjon for å slette en stolpe
+QUnit.test("3- fiks valgt stolpe blir slettet", function (assert) {
+    const actual = ; 
+    const expected = [-1]; 
+    assert.deepEqual(actual, expected);
+});
+//Test funksjon for å endre en stolpe
+QUnit.test("4- fiks endre stolpe", function (assert) {
+    const actual = ; 
+    const expected = [1]; 
+    assert.deepEqual(actual, expected);
+});
+
+//Test funksjon for å legge til en stolpe
+QUnit.test("5- fiks legg til stolpe", function (assert) {
+    const actual = ; 
+    const expected = [1]; 
+    assert.deepEqual(actual, expected);
+});
+
+</script>
+
+</body>

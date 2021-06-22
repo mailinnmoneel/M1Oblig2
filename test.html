@@ -16,8 +16,8 @@
 function checkIfChosen(){}
 function show(){}
 
-//Litt usikker
-QUnit.test("1- sjekke at valgt stolpe er valgt", function (assert) {
+
+QUnit.test("1- sjekker om valgt stolpe faktisk er registrert som valgt", function (assert) {
 
     selectedPillar = 1;
     choosePillar(1)
@@ -28,7 +28,7 @@ QUnit.test("1- sjekke at valgt stolpe er valgt", function (assert) {
 });
 
 
-QUnit.test("2- fiks velge en annen stolpe enn den som er valgt", function (assert) {
+QUnit.test("2- sjekker om du kan velge en annen stolpe enn den som er valgt", function (assert) {
 
     selectedPillar = 3;
     choosePillar(2)
@@ -39,7 +39,7 @@ QUnit.test("2- fiks velge en annen stolpe enn den som er valgt", function (asser
 });
 
 
-QUnit.test("4- fiks endre på valgt stolpe", function (assert) {
+QUnit.test("3- sjekker om valgt stolpe blir endret", function (assert) {
 
     numbers = [7, 3, 1, 5, 8];
     inputValue = 6;
@@ -52,7 +52,7 @@ QUnit.test("4- fiks endre på valgt stolpe", function (assert) {
     assert.equal(actual, expected);
 });
 
-QUnit.test("4- fiks endre på valgt stolpe", function (assert) {
+QUnit.test("4- sjekker på en annen måte om valgt stolpe blir endret", function (assert) {
 
         numbers = [7, 3, 1, 5, 8];
         inputValue = 6;
@@ -66,7 +66,7 @@ QUnit.test("4- fiks endre på valgt stolpe", function (assert) {
 });
 
 
-QUnit.test("5- fiks legg til stolpe", function (assert) {
+QUnit.test("5- sjekker om stolpe blir lagt til", function (assert) {
 
     numbers = [7, 3, 1, 5, 8]; 
     inputValue = 10;
@@ -78,8 +78,8 @@ QUnit.test("5- fiks legg til stolpe", function (assert) {
     assert.equal(actual, expected);
 });
 
-//Lage flere tester
-QUnit.test("3- fiks valgt stolpe blir slettet", function (assert) {
+
+QUnit.test("6- Sjekker om valgt stolpe blir slettet", function (assert) {
 
 numbers = [7, 3, 1, 5, 8];
 selectedPillar = 5;

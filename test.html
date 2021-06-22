@@ -20,25 +20,25 @@ function show(){}
 QUnit.test("1- sjekke at valgt stolpe er valgt", function (assert) {
 
     selectedPillar = 1;
-    currentPillar()
+    choosePillar(1)
 
     const actual = selectedPillar; 
-    const expected = 1; 
-    assert.deepEqual(actual, expected);
+    const expected = null; 
+    assert.equal(actual, expected);
 });
 
-//Litt usikker
+
 QUnit.test("2- fiks velge en annen stolpe enn den som er valgt", function (assert) {
 
     selectedPillar = 3;
-    currentPillar()
+    choosePillar(2)
 
     const actual = selectedPillar; 
-    const expected = 3;
+    const expected = 2;
     assert.deepEqual(actual, expected);
 });
 
-//Litt usikker
+
 QUnit.test("4- fiks endre på valgt stolpe", function (assert) {
 
     numbers = [7, 3, 1, 5, 8];
@@ -52,7 +52,20 @@ QUnit.test("4- fiks endre på valgt stolpe", function (assert) {
     assert.equal(actual, expected);
 });
 
-//Ganske sikker
+QUnit.test("4- fiks endre på valgt stolpe", function (assert) {
+
+        numbers = [7, 3, 1, 5, 8];
+        inputValue = 6;
+        selectedPillar = 5;
+
+        changePillar();
+
+        const actual = numbers; 
+        const expected = [7, 3, 1, 5, 6]; 
+        assert.deepEqual(actual, expected);
+});
+
+
 QUnit.test("5- fiks legg til stolpe", function (assert) {
 
     numbers = [7, 3, 1, 5, 8]; 
@@ -65,7 +78,7 @@ QUnit.test("5- fiks legg til stolpe", function (assert) {
     assert.equal(actual, expected);
 });
 
-//Ganske sikker
+//Lage flere tester
 QUnit.test("3- fiks valgt stolpe blir slettet", function (assert) {
 
 numbers = [7, 3, 1, 5, 8];
@@ -76,7 +89,7 @@ deletePillar()
 
 const actual = numbers.length; 
 const expected = 4; 
-assert.deepEqual(actual, expected);
+assert.equal(actual, expected);
 });
 
 </script>

@@ -11,7 +11,7 @@
          <svg id="chart" width="500" viewBox="0 0 80 60">
              ${svgInnerHtml}
          </svg><br/>
-         Valgt stolpe: <i>${currentPillar()}</i> 
+         Valgt stolpe: <i>${valgtStolpe()}</i> 
          <br />
          Verdi:
          <input type="number" min="1" max="10" oninput="inputValue = this.value" />

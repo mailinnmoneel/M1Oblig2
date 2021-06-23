@@ -9,7 +9,7 @@ function choosePillar(id)
     show();
 }
 
-function currentPillar()
+function valgtStolpe()
 {
     return selectedPillar == null ? "Ingen" : selectedPillar;
 }
